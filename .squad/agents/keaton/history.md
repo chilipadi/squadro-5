@@ -98,3 +98,5 @@
 **RFC ISSUE FILED.** Created [#252](https://github.com/bradygaster/squad/issues/252) — comprehensive PRD for migrating Squad automation from GitHub Actions to CLI commands. Community-facing RFC with full problem statement, tiered model (Tier 1: zero-actions default, Tier 2: opt-in, Tier 3: enterprise), migration plan across v0.8.22/v0.8.23/v0.9.0, backward compatibility guarantees, and 7 specific feedback questions. References #248 (triage wiring) and #236 (persistent watch). Labels: `type:rfc`, `priority:p1`. Reflects unanimous team consensus from 4-agent analysis session.
 
 
+
+📌 Discussions-to-Issues batch (2026-03-07T17:07:51Z): Filed 5 issues from actionable community discussions with follow-up replies. #256 (GitHub App auth), #257 (Coordinator delegation), #258 (Teams MCP docs), #259 (VS Code crash), #260 (GitHub.com-based experience). All with discussion references and proper labels.

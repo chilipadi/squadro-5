@@ -5565,3 +5565,13 @@ Filed [#252](https://github.com/bradygaster/squad/issues/252) as the public RFC 
 **What:** Delete `.github/workflows/squad-main-guard.yml` entirely in v0.8.22. Squad state in repos is fine — no longer need to block `.squad/` from protected branches.
 **Why:** User directive — "i want that guard GONE in the next release. completely and totally gone." The original policy of keeping `.squad/` off main/preview is obsolete. Squad files in repos are now welcome and expected.
 
+
+### 2026-03-07T17:01:00Z: User directive — Community engagement and follow-through
+**By:** Brady (via Copilot)
+**What:** Discussion replies must always be supportive and helpful. Never say "we can't help" without doing the research first. When a discussion represents a real user need, file an issue so it makes its way into the product. Point users to specific features/docs when their request is already addressed.
+**Why:** User request — community engagement tone and follow-through policy.
+
+### 2026-03-07T17:00:00Z: User directive — Skill orchestration priority
+**By:** Brady (via Copilot)
+**What:** Skill-based orchestration (Discussion #169) is a "HUGEly sexy idea" — elevate this to a high-priority feature direction. Convert to issue and treat as strategic.
+**Why:** User request — captured for team memory. This aligns with SDK-First roadmap and addresses the growing complexity of squad.agent.md.
