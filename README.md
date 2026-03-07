@@ -1,17 +1,19 @@
-# Squad
+# Squadro-5
 
 **AI agent teams for any project.** One command. A team that grows with your code.
 
-[![Status](https://img.shields.io/badge/status-alpha-blueviolet)](#status)
-[![Platform](https://img.shields.io/badge/platform-GitHub%20Copilot-blue)](#what-is-squad)
+> 💡 **Note:** This is a fork of the [original Squad project](https://github.com/bradygaster/squad) by Brady Gaster.
 
-> ⚠️ **Alpha Software** — Squad is experimental. APIs and CLI commands may change between releases. We'll document breaking changes in [CHANGELOG.md](CHANGELOG.md).
+[![Status](https://img.shields.io/badge/status-alpha-blueviolet)](#status)
+[![Platform](https://img.shields.io/badge/platform-GitHub%20Copilot-blue)](#what-is-squadro-5)
+
+> ⚠️ **Alpha Software** — Squadro-5 is experimental. APIs and CLI commands may change between releases. We'll document breaking changes in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
-## What is Squad?
+## What is Squadro-5?
 
-Squad gives you an AI development team through GitHub Copilot. Describe what you're building. Get a team of specialists — frontend, backend, tester, lead — that live in your repo as files. They persist across sessions, learn your codebase, share decisions, and get better the more you use them.
+Squadro-5 gives you an AI development team through GitHub Copilot. Describe what you're building. Get a team of specialists — frontend, backend, tester, lead — that live in your repo as files. They persist across sessions, learn your codebase, share decisions, and get better the more you use them.
 
 It's not a chatbot wearing hats. Each team member runs in its own context, reads only its own knowledge, and writes back what it learned.
 
@@ -26,7 +28,7 @@ mkdir my-project && cd my-project
 git init
 ```
 
-### 2. Install Squad
+### 2. Install Squadro-5
 
 ```bash
 npm install --save-dev @bradygaster/squad-cli
@@ -47,8 +49,8 @@ gh auth login
 copilot
 ```
 
-**In the GitHub Copilot CLI**, type `/agent` and select **Squad**.
-**In VS Code**, type `/agents` and select **Squad**.
+**In the GitHub Copilot CLI**, type `/agent` and select **Squadro-5**.
+**In VS Code**, type `/agents` and select **Squadro-5**.
 
 Then:
 
@@ -57,7 +59,7 @@ I'm starting a new project. Set up the team.
 Here's what I'm building: a recipe sharing app with React and Node.
 ```
 
-Squad proposes a team — each member named from a persistent thematic cast. You say **yes**. They're ready.
+Squadro-5 proposes a team — each member named from a persistent thematic cast. You say **yes**. They're ready.
 
 ---
 
