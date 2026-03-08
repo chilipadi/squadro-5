@@ -17,6 +17,20 @@ Squadro-5 gives you an AI development team through GitHub Copilot. Describe what
 
 It's not a chatbot wearing hats. Each team member runs in its own context, reads only its own knowledge, and writes back what it learned.
 
+## 🎵 The Mambo #5 Universe
+
+Squadro-5's signature addition: a playful new universe inspired by the Lou Bega classic. When you initialize your squad, you can now choose "Mambo #5" and get a team of seven specialists:
+
+- **Monica** (Lead) — "A little bit of Monica in my life"
+- **Erica** (Developer) — "A little bit of Erica by my side"
+- **Rita** (Tester) — "A little bit of Rita is all I need"
+- **Tina** (Prompt Engineer) — "A little bit of Tina is what I see"
+- **Sandra** (Designer) — "A little bit of Sandra in the sun"
+- **Mary** (Security) — "A little bit of Mary can move my data safely"
+- **Jessica** (DevOps) — "A little bit of Jessica is what I need"
+
+It's a little bit of everything in your AI development team — a fun, memorable twist on the usual casting system that makes your squad feel like a hit song playing on repeat.
+
 ---
 
 ## Quick Start
