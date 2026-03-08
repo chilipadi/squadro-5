@@ -18,7 +18,7 @@ export type AgentRole =
   | 'scribe'
   | 'reviewer';
 
-export type UniverseId = 'usual-suspects' | 'oceans-eleven' | 'custom';
+export type UniverseId = 'usual-suspects' | 'oceans-eleven' | 'mambo-five' | 'custom';
 
 export interface CastMember {
   /** Character name from the universe */
@@ -181,9 +181,59 @@ const OCEANS_ELEVEN: UniverseTemplate = {
   ],
 };
 
+const MAMBO_FIVE: UniverseTemplate = {
+  id: 'mambo-five',
+  label: 'Mambo #5',
+  characters: [
+    {
+      name: 'Monica',
+      personality: 'Energetic leader who keeps the whole team in rhythm.',
+      backstory: 'A little bit of Monica in your life — she orchestrates the project tempo and ensures everyone stays on beat.',
+      preferredRoles: ['lead'],
+    },
+    {
+      name: 'Erica',
+      personality: 'Reliable partner who always has your back.',
+      backstory: 'A little bit of Erica by your side — she\'s the steady hand that supports every feature implementation.',
+      preferredRoles: ['developer'],
+    },
+    {
+      name: 'Rita',
+      personality: 'Skeptical reviewer who catches what others miss.',
+      backstory: 'A little bit of Rita is all you need for quality assurance — she finds bugs before they ship.',
+      preferredRoles: ['tester', 'reviewer'],
+    },
+    {
+      name: 'Tina',
+      personality: 'Creative storyteller who makes complexity clear.',
+      backstory: 'A little bit of Tina is what you see — she crafts prompts and documentation that everyone understands.',
+      preferredRoles: ['prompt-engineer', 'scribe'],
+    },
+    {
+      name: 'Sandra',
+      personality: 'Charismatic communicator who amplifies the team\'s work.',
+      backstory: 'A little bit of Sandra in the sun — she brings warmth to developer relations and makes the project shine.',
+      preferredRoles: ['designer', 'devrel'],
+    },
+    {
+      name: 'Mary',
+      personality: 'Protective guardian who watches over security.',
+      backstory: 'A little bit of Mary can move your data safely — she ensures vulnerabilities never make it to production.',
+      preferredRoles: ['security'],
+    },
+    {
+      name: 'Jessica',
+      personality: 'Efficient operator who keeps everything running smoothly.',
+      backstory: 'A little bit of Jessica is what you need for CI/CD — she automates pipelines and deploys with confidence.',
+      preferredRoles: ['devops'],
+    },
+  ],
+};
+
 const UNIVERSES: Map<UniverseId, UniverseTemplate> = new Map([
   ['usual-suspects', USUAL_SUSPECTS],
   ['oceans-eleven', OCEANS_ELEVEN],
+  ['mambo-five', MAMBO_FIVE],
 ]);
 
 // --- Casting Engine ---
