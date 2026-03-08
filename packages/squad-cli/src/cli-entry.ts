@@ -22,6 +22,37 @@ process.emit = function (evt: string, ...args: unknown[]) {
   return _origEmit.apply(this, [evt, ...args] as Parameters<typeof _origEmit>);
 };
 
+// Runtime ESM Import Patcher for @github/copilot-sdk (#265)
+// ---------------------------------------------------------
+// Patch broken ESM import in @github/copilot-sdk@0.1.32 at runtime before
+// Node's module loader attempts resolution.
+//
+// Root cause: copilot-sdk's session.js imports 'vscode-jsonrpc/node' without
+// .js extension, violating Node 24+ strict ESM resolution requirements.
+//
+// Why runtime patch?: NPX caches packages in ~/.npm/_cacache and skips
+// postinstall scripts on cache hits (documented npm behavior). The install-time
+// patch in scripts/patch-esm-imports.mjs never runs on npx cache hits, causing
+// ERR_MODULE_NOT_FOUND crashes on Node 24+.
+//
+// This runtime patch intercepts Module._resolveFilename before any imports
+// trigger copilot-sdk loading, rewriting the broken import to include .js.
+// Works everywhere: npx (cache hit/miss), global install, CI/CD.
+//
+// Upstream issue: https://github.com/github/copilot-sdk/issues/707
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const Module = require('node:module');
+
+const _origResolveFilename = Module._resolveFilename;
+Module._resolveFilename = function (request: string, parent: unknown, isMain: boolean, options?: unknown) {
+  // Intercept the broken import: 'vscode-jsonrpc/node' → 'vscode-jsonrpc/node.js'
+  if (request === 'vscode-jsonrpc/node') {
+    request = 'vscode-jsonrpc/node.js';
+  }
+  return _origResolveFilename.call(this, request, parent, isMain, options);
+};
+
 // Pre-flight: detect missing node:sqlite before the Copilot SDK tries to use it.
 // The @github/copilot SDK lazily imports node:sqlite for session storage.
 // Node.js <22.5.0 and some 22.x builds don't include the builtin. (#214)
@@ -143,8 +174,9 @@ async function main(): Promise<void> {
     console.log(`             Flags: --status, --check`);
     console.log(`  ${BOLD}extract${RESET}    Extract learnings from consult mode session`);
     console.log(`             Flags: --dry-run, --clean, --yes, --accept-risks`);
-    console.log(`  ${BOLD}workstreams${RESET} Manage Squad Workstreams (multi-Codespace scaling)`);
-    console.log(`             Usage: workstreams <list|status|activate <name>>`);
+    console.log(`  ${BOLD}subsquads${RESET}  Manage Squad SubSquads (multi-Codespace scaling)`);
+    console.log(`             Usage: subsquads <list|status|activate <name>>`);
+    console.log(`             Aliases: workstreams, streams (deprecated)`);
     console.log(`  ${BOLD}link${RESET}       Link project to a remote team root`);
     console.log(`             Usage: link <team-repo-path>`);
     console.log(`  ${BOLD}build${RESET}      Compile squad.config.ts into .squad/ markdown`);
@@ -366,9 +398,9 @@ async function main(): Promise<void> {
     return;
   }
 
-  if (cmd === 'workstreams' || cmd === 'streams') {
-    const { runWorkstreams } = await import('./cli/commands/streams.js');
-    await runWorkstreams(process.cwd(), args.slice(1));
+  if (cmd === 'subsquads' || cmd === 'workstreams' || cmd === 'streams') {
+    const { runSubSquads } = await import('./cli/commands/streams.js');
+    await runSubSquads(process.cwd(), args.slice(1));
     return;
   }
 

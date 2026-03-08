@@ -38,13 +38,15 @@ const SECTIONS = [
   { dir: 'features', title: 'Features' },
   { dir: 'reference', title: 'Reference' },
   { dir: 'scenarios', title: 'Scenarios' },
+  { dir: 'concepts', title: 'Concepts' },
+  { dir: 'cookbook', title: 'Cookbook' },
   { dir: 'blog', title: 'Blog' },
 ];
 
 // Explicit ordering within sections (filename without .md → priority)
 const SECTION_ORDER = {
   'get-started': ['installation', 'first-session', 'migration'],
-  'guide': ['tips-and-tricks', 'sample-prompts', 'personal-squad'],
+  'guide': ['tips-and-tricks', 'sample-prompts', 'personal-squad', 'contributing', 'contributors'],
   'features': [
     'team-setup', 'routing', 'model-selection', 'response-modes',
     'parallel-execution', 'memory', 'skills', 'directives',
@@ -57,6 +59,8 @@ const SECTION_ORDER = {
   ],
   'reference': ['cli', 'sdk', 'config'],
   'scenarios': ['existing-repo', 'solo-dev', 'issue-driven-dev', 'monorepo', 'ci-cd-integration', 'team-of-humans', 'aspire-dashboard'],
+  'concepts': ['your-team', 'memory-and-knowledge', 'parallel-work', 'github-workflow', 'portability'],
+  'cookbook': ['recipes'],
 };
 
 // Parse optional YAML-style frontmatter (--- fenced)
