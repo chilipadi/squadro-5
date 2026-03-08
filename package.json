@@ -41,12 +41,12 @@
     "sdk"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/bradygaster/squad#readme",
+  "homepage": "https://github.com/chilipadi/squadro-5#readme",
   "bugs": {
-    "url": "https://github.com/bradygaster/squad/issues"
+    "url": "https://github.com/chilipadi/squadro-5/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bradygaster/squad.git"
+    "url": "https://github.com/chilipadi/squadro-5.git"
   }
 }
