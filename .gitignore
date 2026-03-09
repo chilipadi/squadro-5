@@ -18,5 +18,5 @@ docs/dist/
 .squad-workstream
 .squad/.first-run
 
-# Images folder
-images/
+# Images folder (root only — don't ignore docs/public/images/)
+/images/
