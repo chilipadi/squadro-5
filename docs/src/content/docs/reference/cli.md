@@ -49,7 +49,7 @@ squad init
 | `squad aspire` | Launch Aspire dashboard for observability | No |
 | `squad aspire --docker` | Force Docker mode for Aspire | No |
 | `squad upstream add\|remove\|list\|sync` | Manage upstream Squad sources | Yes |
-| `squad shell` | Launch interactive shell explicitly | No |
+| `copilot --agent squad` | Launch interactive shell explicitly | No |
 | `squad nap` | Context hygiene (compress, prune, archive .squad/ state) | Yes |
 | `squad nap --deep` | Thorough cleanup with recursive descent | Yes |
 | `squad nap --dry-run` | Preview cleanup actions without changes | Yes |

@@ -28,8 +28,8 @@ The workflow is in `.github/workflows/squad-heartbeat.yml` and runs every 6 hour
 ```yaml
 name: Ralph Heartbeat
 on:
-  schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+  # schedule:
+  #   - cron: '0 */6 * * *'  # Every 6 hours
   workflow_dispatch:
 
 jobs:
@@ -40,6 +40,8 @@ jobs:
       - name: Run Ralph
         run: squad heartbeat
 ```
+
+> ⚡ **Cron is commented out by default.** The heartbeat schedule is disabled when Squad installs the workflow — it only runs via manual `workflow_dispatch` until you uncomment the `schedule` block. Be aware: enabling scheduled heartbeats will consume GitHub Actions minutes on every run. A 6-hour cron burns ~120 runs/month. Adjust the frequency to match your budget, or leave it manual and trigger heartbeats from the CLI with `squad heartbeat`.
 
 Ralph reads `.squad/routing.md`, looks at open issues, and applies labels:
 

@@ -95,7 +95,8 @@ These community members shaped Squad through issues, discussions, and feedback. 
 | Contributor | Contributions |
 |-------------|---------------|
 | [@dfberry](https://github.com/dfberry) | #241 (Squad member for docs), #157 (CFO/account member) — docs and team composition ideas |
-| [@diberry](https://github.com/diberry) | #211 (Squad management paradigms) — management approaches |
+| [@IEvangelist](https://github.com/IEvangelist) | PR #293 (Astro docs rewrite) — complete documentation site rebuild with Astro, Tailwind CSS, Pagefind search, responsive design. Massive contribution. |
+| [@diberry](https://github.com/diberry) | #211 (Squad management paradigms), PR #286 (Quick Start validation), PR #288 (installation decision tree), PR #290 (.squad/ directory explainer), PR #292 (doc-impact review process) — management approaches, documentation improvements across multiple PRs |
 | [@HemSoft](https://github.com/HemSoft) | #148 (GitHub Agent Workflows) — GAW concept |
 | [@sturlath](https://github.com/sturlath) | #156 (Team learning from others' work) — cross-agent learning |
 | [@tomasherceg](https://github.com/tomasherceg) | #184 (Multi-PR commit isolation), #237 (CLI wiring bug) — worktree improvements and bug reports |
