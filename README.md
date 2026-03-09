@@ -13,9 +13,11 @@
 
 ## What is Squadro-5?
 
-Squadro-5 gives you an AI development team through GitHub Copilot. Describe what you're building. Get a team of specialists — frontend, backend, tester, lead — that live in your repo as files. They persist across sessions, learn your codebase, share decisions, and get better the more you use them.
+Squadro-5 is a fun fork of [Squad](https://github.com/bradygaster/squad) — the programmable multi-agent runtime for GitHub Copilot. Squad gives you an AI development team through GitHub Copilot. You describe what you're building, and you get a team of specialists — frontend, backend, tester, lead — that live in your repo as files. They persist across sessions, learn your codebase, share decisions, and get better the more you use them.
 
 It's not a chatbot wearing hats. Each team member runs in its own context, reads only its own knowledge, and writes back what it learned.
+
+Squadro-5 simply adds a tongue-in-cheek universe option to the casting system. No new features, no superiority claims — just a playful addition to an already great tool.
 
 ## 🎵 The Mambo #5 Universe
 
