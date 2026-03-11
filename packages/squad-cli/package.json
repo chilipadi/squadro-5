@@ -1,6 +1,6 @@
 {
   "name": "@bradygaster/squad-cli",
-  "version": "0.8.24",
+  "version": "0.8.25",
   "description": "Squad CLI — Command-line interface for the Squad multi-agent runtime",
   "type": "module",
   "bin": {
@@ -148,7 +148,7 @@
     "README.md"
   ],
   "scripts": {
-    "postinstall": "node scripts/patch-esm-imports.mjs",
+    "postinstall": "node scripts/patch-esm-imports.mjs && node scripts/patch-ink-rendering.mjs",
     "prepublishOnly": "npm run build",
     "build": "tsc -p tsconfig.json && npm run postbuild",
     "postbuild": "node -e \"require('fs').cpSync('src/remote-ui', 'dist/remote-ui', {recursive: true})\""
@@ -157,7 +157,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@bradygaster/squad-sdk": "*",
+    "@bradygaster/squad-sdk": "0.8.25",
     "ink": "^6.8.0",
     "react": "^19.2.4",
     "vscode-jsonrpc": "^8.2.1"

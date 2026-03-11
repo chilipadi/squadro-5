@@ -2,7 +2,7 @@
 
 **AI agent teams for any project.** One command. A team that grows with your code.
 
-> 💡 **Note:** This is a fork of the [original Squad project](https://github.com/bradygaster/squad) by Brady Gaster.
+> 💡 **Note:** This is a fork of the [original Squad project](https://github.com/bradygaster/squad) by Brady Gaster. Squadro-5 adds a fun Mambo #5 universe to the casting system!
 
 [![Status](https://img.shields.io/badge/status-alpha-blueviolet)](#status)
 [![Platform](https://img.shields.io/badge/platform-GitHub%20Copilot-blue)](#what-is-squadro-5)
@@ -19,20 +19,6 @@ It's not a chatbot wearing hats. Each team member runs in its own context, reads
 
 Squadro-5 simply adds a tongue-in-cheek universe option to the casting system. No new features, no superiority claims — just a playful addition to an already great tool.
 
-## 🎵 The Mambo #5 Universe
-
-Squadro-5's signature addition: a playful new universe inspired by the Lou Bega classic. When you initialize your squad, you can now choose "Mambo #5" and get a team of seven specialists:
-
-- **Monica** (Lead) — "A little bit of Monica in my life"
-- **Erica** (Developer) — "A little bit of Erica by my side"
-- **Rita** (Tester) — "A little bit of Rita is all I need"
-- **Tina** (Prompt Engineer) — "A little bit of Tina is what I see"
-- **Sandra** (Designer) — "A little bit of Sandra in the sun"
-- **Mary** (Security) — "A little bit of Mary can move my data safely"
-- **Jessica** (DevOps) — "A little bit of Jessica is what I need"
-
-It's a little bit of everything in your AI development team — a fun, memorable twist on the usual casting system that makes your squad feel like a hit song playing on repeat.
-
 ---
 
 ## Quick Start
@@ -44,12 +30,16 @@ mkdir my-project && cd my-project
 git init
 ```
 
+**✓ Validate:** Run `git status` — you should see "No commits yet".
+
 ### 2. Install Squadro-5
 
 ```bash
-npm install --save-dev @bradygaster/squad-cli
-npx squad init
+npm install -g @bradygaster/squad-cli
+squad init
 ```
+
+**✓ Validate:** Check that `.squad/team.md` was created in your project.
 
 **Or use npx (no install):** `npx @bradygaster/squad-cli` — see [Migration Guide](docs/get-started/migration.md) if upgrading from an older version.
 
@@ -58,6 +48,8 @@ npx squad init
 ```bash
 gh auth login
 ```
+
+**✓ Validate:** Run `gh auth status` — you should see "Logged in to github.com".
 
 ### 4. Open Copilot and go
 
@@ -75,7 +67,9 @@ I'm starting a new project. Set up the team.
 Here's what I'm building: a recipe sharing app with React and Node.
 ```
 
-Squadro-5 proposes a team — each member named from a persistent thematic cast. You say **yes**. They're ready.
+**✓ Validate:** Squad responds with team member proposals. Type `yes` to confirm — they're ready to work.
+
+Squad proposes a team — each member named from a persistent thematic cast. You say **yes**. They're ready.
 
 ---
 
